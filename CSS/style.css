@@ -421,6 +421,9 @@ span{
     grid-template-columns: repeat(3,1fr);
     gap: 3rem;
 }
+#my-journey{
+    color: white;
+}
 .testimonial-item{
     min-height:450px;
     max-width: 450px;
@@ -654,3 +657,26 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
+
+
+.certificate-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+.gallery{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.gallery img{
+    width: 100%;
+}
+.card-link {
+    display: block; /* Makes the anchor tag behave like a block-level element */
+    text-decoration: none; /* Removes the default underline from the link */
+  }
