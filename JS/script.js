@@ -38,19 +38,19 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-function sendEmail() {
-  // used smtpj.com website server and app.elasticemail.com
-  Email.send({
-    Host: "smtp.mailendo.com",
-    Username: "cosmiccoderff@gmail.com",
-    Password: "65046D93333438D680E071572C750DD4B2AB",
-    To: "cosmiccoderff@gmail.com",
-    From: "cosmiccoderff@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  sendEmail();
-});
+// function sendEmail() {
+//   // used smtpj.com website server and app.elasticemail.com
+//   Email.send({
+//     Host: "smtp.mailendo.com",
+//     Username: "cosmiccoderff@gmail.com",
+//     Password: "65046D93333438D680E071572C750DD4B2AB",
+//     To: "cosmiccoderff@gmail.com",
+//     From: "cosmiccoderff@gmail.com",
+//     Subject: "This is the subject",
+//     Body: "And this is the body",
+//   }).then((message) => alert(message));
+// }
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   sendEmail();
+// });
