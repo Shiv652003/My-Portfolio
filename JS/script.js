@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+// const form = document.querySelector("form");
 
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
@@ -41,10 +41,10 @@ menuIcon.onclick = () => {
 // function sendEmail() {
 //   // used smtpj.com website server and app.elasticemail.com
 //   Email.send({
-//     Host: "smtp.mailendo.com",
+//     Host: "smtp.elasticemail.com",
 //     Username: "cosmiccoderff@gmail.com",
 //     Password: "65046D93333438D680E071572C750DD4B2AB",
-//     To: "cosmiccoderff@gmail.com",
+//     To: "shivpratappatell.com",
 //     From: "cosmiccoderff@gmail.com",
 //     Subject: "This is the subject",
 //     Body: "And this is the body",
@@ -54,3 +54,18 @@ menuIcon.onclick = () => {
 //   e.preventDefault();
 //   sendEmail();
 // });
+
+function sendEmail() {
+
+  Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "cosmiccoderff@gmail.com",
+      Password: "65046D93333438D680E071572C750DD4B2AB",
+      To: "shivpratappatell@gmail.com",
+      From: "cosmiccoderff@gmail.com",
+      Subject: "This is the subject",
+      Body: "And this is the body"
+  }).then(
+    message => alert(message)
+);
+}

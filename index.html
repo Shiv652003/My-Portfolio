@@ -187,8 +187,8 @@
             <div class="wrapper">
                 <div class="testimonial-item">
                     <img src="images/cert3.jpg" alt="">
-<!--                     <a id="my-journey" href="pages/certifications.html"><h2>Certifications</h2></a> -->
-                    <h2>Certifications</h2>
+                    <a id="my-journey" href="pages/certifications.html"><h2>Certifications</h2></a>
+                    <!-- <h2>Certifications</h2> -->
                     <div class="rating">
                         <i class='bx bxs-star' id="star"></i>
                         <i class='bx bxs-star' id="star"></i>
@@ -237,7 +237,7 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="">
+        <form onsubmit="emailSend(); reset(); return false;">
             <div class="input-group">
                 <div class="input-box txt-field">
                     <input type="text" placeholder="Full Name">
@@ -305,23 +305,7 @@
     </footer>
 
     <script src="JS/script.js"></script>
-<!--     <script src="https://smtpjs.com/v3/smtp.js"> -->
+    <script src="https://smtpjs.com/v3/smtp.js">
     </script>
-    <!-- <script>
-        function sendEmail(){
-            // used smtpj.com website server and app.elasticemail.com
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "cosmiccoderff@gmail.com",
-                Password : "65046D93333438D680E071572C750DD4B2AB",
-                To : 'cosmiccoderff@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-              message => alert(message)
-            );
-        }
-    </script> -->
 </body>
 </html>
