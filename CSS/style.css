@@ -49,6 +49,30 @@ body {
 .logo span{
     text-shadow: 0 0 25px var(--main-color);
 }
+/*  */
+.navbar {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Adjust position below the header */
+    right: 0;
+    background-color: var(--main-color);
+    width: 100%; /* Full width for mobile view */
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .navbar.active {
+    display: block; /* Show navbar when active */
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+/*  */
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -265,26 +289,42 @@ span{
 .education h2{
     margin-bottom: 5rem;
 }
-.timeline-items{
+.timeline-items {
     max-width: 1200px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    justify-content: space-between; /* Ensures the boxes are spaced evenly */
 }
-.timeline-items::before{
+
+.timeline-items::before {
     content: "";
     position: absolute;
-    width: 5px;
+    width: 5px; 
     height: 100%;
     background-color: var(--main-color);
-    left: calc(50% -1px);
-    right: inherit;
+    left: 50%; /* Centers the vertical line */
+    transform: translateX(-50%); 
+}
+
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 
+        0 0 25px var(--main-color),
+        0 0 50px var(--main-color);
+    position: absolute;
+    left: 50%; /* Centers the dot on the vertical line */
+    transform: translateX(-50%); 
+    border-radius: 50%;
+    top: 10px; 
 }
 .timeline-item{
     margin-bottom: 40px;
     width: 100%;
-    position: relative;
+    position:relative;
 }
 .timeline-item:last-child{
     margin-bottom: 0;
@@ -296,17 +336,7 @@ span{
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
 }
-.timeline-dot{
-    height: 21px;
-    width: 21px;
-    background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color),
-                0 0  50px var(--main-color);
-    position: absolute;
-    left: calc(50% -8px);
-    border-radius: 50%;
-    top: 10px;
-}
+
 .timeline-date{
     font-size: 20px;
     font-weight: 800;

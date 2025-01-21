@@ -1,41 +1,48 @@
 // const form = document.querySelector("form");
 
+// Select the menu icon and navbar elements
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
+
+// Toggle the hamburger menu on click
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x"); // Toggles the hamburger icon to 'X' and back
+  navbar.classList.toggle("active"); // Toggles the visibility of the navbar
+};
+
+// Highlight active section in the navbar on scroll
 let sections = document.querySelectorAll("section");
 let navlinks = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    let top = window.scrollY; // Current scroll position
+    let offset = sec.offsetTop - 150; // Section offset with a buffer
+    let height = sec.offsetHeight; // Height of the section
+    let id = sec.getAttribute("id"); // Section ID
 
-    // if(top >= offset && top < offset + height){
-    //     navlinks.forEach(links => {
-    //         links.classList.remove('active');
-    //         document.querySelector('header nav a [href*=' + id + ']').classList.add('active')
-    //     })
-    // }
-
+    // Check if the current scroll position is within the section
     if (top >= offset && top < offset + height) {
+      // Remove 'active' class from all navbar links
       navlinks.forEach((link) => {
         link.classList.remove("active");
       });
+
+      // Add 'active' class to the current section's navbar link
       const activeLink = document.querySelector(
-        'header nav a[href*="' + id + '"]'
+        `header nav a[href*="${id}"]`
       );
       if (activeLink) {
         activeLink.classList.add("active");
       }
     }
   });
-};
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
+  // Close the navbar when scrolling
+  if (navbar.classList.contains("active")) {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+  }
 };
 
 // function sendEmail() {
@@ -54,18 +61,3 @@ menuIcon.onclick = () => {
 //   e.preventDefault();
 //   sendEmail();
 // });
-
-function sendEmail() {
-
-  Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "cosmiccoderff@gmail.com",
-      Password: "65046D93333438D680E071572C750DD4B2AB",
-      To: "shivpratappatell@gmail.com",
-      From: "cosmiccoderff@gmail.com",
-      Subject: "This is the subject",
-      Body: "And this is the body"
-  }).then(
-    message => alert(message)
-);
-}

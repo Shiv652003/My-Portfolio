@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    
+<body> 
+
     <header class="header">
-        <a href="#home" class="logo"> <span>Shiv</span> Pratap Patel</a>
+        <a href="#home" class="logo"> <span>Shiv</span> Pratap Patel </a> 
+        
         <i class="bx bx-menu" id="menu-icon"></i>
 
 
@@ -202,7 +203,8 @@
                 
                 <div class="testimonial-item">
                     <img src="images/ach2.jpg" alt="">
-                    <h2>Achievements</h2>
+                    <!-- <h2>Achievements</h2> -->
+                    <a id="my-journey" href="pages/achievements.html"><h2>Achievements</h2></a>
                     <div class="rating">
                         <i class='bx bxs-star' id="star"></i>
                         <i class='bx bxs-star' id="star"></i>
@@ -237,38 +239,36 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form onsubmit="emailSend(); reset(); return false;">
+        <!-- <form onsubmit="emailSend(); reset(); return false;"> -->
+        <form action="https://api.web3forms.com/submit" method="POST">
             <div class="input-group">
                 <div class="input-box txt-field">
-                    <input type="text" placeholder="Full Name">
+                    <input type="hidden" name="access_key" value="c3385c8e-d8b0-4705-aa0f-63e1ed47fbe3">
+                    <input type="text" name="Full Name" placeholder="Full Name">
                     <div class="error-text">full name can't be blank</div>
-                    <input type="email" placeholder="Email">
+                    <input type="email" name="Email" placeholder="Email">
                     <div class="error-text">full name can't be blank</div>
                 </div>
                 <div class="input-box txt-field">
-                    <input type="number" placeholder="Phone Number">
+                    <input type="number" name="Phone Number" placeholder="Phone Number">
                     <div class="error-text">full name can't be blank</div>
-                    <input type="text" placeholder="Subject">
+                    <input type="text" name="Subject" placeholder="Subject">
                     <div class="error-text">full name can't be blank</div>
                 </div>
             </div>
             
             <div class="input-group-2 txt-field">
-                <textarea name="" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
+                <textarea name="Message" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
                 <div class="error-text">full name can't be blank</div>
-                <input type="submit" value="Send Message" class="btn">
+                <input type="submit" value="Send Message" class="btn" >
             </div>
         </form>
-
+        <!-- <script src="https://sheetdb.io/s/f/r93lde9vffz5g.js"></script> -->
+        <!-- Used this code to send the data to google sheet using sheetdb, to remember-> also i have used SMTPjs service to send the form data to gmail using smtp server-->
     </section>
 
     <footer class="footer">
-        <!-- <div class="social">
-            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-        </div> -->
+
         <div class="social">
             <a href="https://www.linkedin.com/in/shiv-pratap-patel-247989256/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
             <a href="https://github.com/Shiv652003" target="_blank"><i class='bx bxl-github' ></i></a>
@@ -277,9 +277,6 @@
         </div>
 
         <ul class="list">
-            <!-- <li>
-                <a href="#">FAQ</a>
-            </li> -->
 
             <li>
                 <a href="#">About Me</a>
@@ -305,6 +302,8 @@
     </footer>
 
     <script src="JS/script.js"></script>
+    <script src="script.js" defer></script>
+
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
 </body>
