@@ -71,6 +71,6 @@ certifications.addEventListener("click",() =>{
 achievements.addEventListener("click",() =>{
   window.location.href="pages/achievements.html";
 });
-projectss.addEventListener("click",() =>{
-  window.location.href="pages/certifications.html";
+projects.addEventListener("click",() =>{
+  window.location.href="pages/proj-1.html";
 });
