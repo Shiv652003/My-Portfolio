@@ -1,4 +1,7 @@
 // const form = document.querySelector("form");
+const certifications= document.getElementById("cert-1")
+const achievements= document.getElementById("achieve-1")
+const projects= document.getElementById("proj-1")
 
 // Select the menu icon and navbar elements
 let menuIcon = document.querySelector("#menu-icon");
@@ -61,3 +64,13 @@ window.onscroll = () => {
 //   e.preventDefault();
 //   sendEmail();
 // });
+
+certifications.addEventListener("click",() =>{
+  window.location.href="pages/certifications.html";
+});
+achievements.addEventListener("click",() =>{
+  window.location.href="pages/achievements.html";
+});
+projectss.addEventListener("click",() =>{
+  window.location.href="pages/certifications.html";
+});
