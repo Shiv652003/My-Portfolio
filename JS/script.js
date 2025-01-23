@@ -1,7 +1,9 @@
 // const form = document.querySelector("form");
-const certifications= document.getElementById("cert-1")
-const achievements= document.getElementById("achieve-1")
-const my_projects= document.getElementById("proj-01")
+let achievItem = document.querySelector('.achiev-items-links')
+let achievImages = document.querySelectorAll('.achiev-img');
+const certifications= document.getElementById("cert-1");
+const achievements= document.getElementById("achieve-1");
+const my_projects= document.getElementById("proj-01");
 
 // Select the menu icon and navbar elements
 let menuIcon = document.querySelector("#menu-icon");
@@ -75,3 +77,12 @@ achievements.addEventListener("click",() =>{
 my_projects.addEventListener("click",() =>{
   window.location.href="pages/project-work.html";
 });
+// code for my achivement section
+window.addEventListener('load', () => {
+  achievItem.addEventListener('click', (selectedItem) => {
+    if(selectedItem.target.classList.contains('achiev-item-link')){
+      document.querySelector('.achiev-menu-active').classList.remove('achiev-menu-active');
+      selectedItem.target.classList.add('achiev-menu-active')
+    }
+  })
+})

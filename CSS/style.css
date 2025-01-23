@@ -687,8 +687,7 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
-
-
+/* for certificate page */
 .certificate-container{
     width: 100%;
     min-height: 100vh;
@@ -710,3 +709,77 @@ span{
     display: block; /* Makes the anchor tag behave like a block-level element */
     text-decoration: none; /* Removes the default underline from the link */
   }
+/* for achievement page  */
+#achiev-02{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+.achiev-container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.achiev-items-links{
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.achiev-item-link{
+    border: 2px solid #00ffee;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: .4s ease;
+}
+.achiev-item-link:hover{
+    background: #00ffee;
+    color:black ;
+}
+.achiev-menu-active{
+    background: #00ffee;
+    color:black ;
+}
+.achiev-gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.achiev-img{
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(175, 175, 175, 0.4s);
+    height: 24rem;
+}
+.achiev-img:hover img{
+    transform:scale(1.1);
+}
+img{
+    width: 100%;
+    height: 100%;
+    display:block;
+    object-fit: cover;
+    transition: .4s ease;
+}
+.achiev-items-links{
+    width: 60%;
+    margin: 40px auto;
+    background: #080808;
+}
+#const-alert{
+    background-color: red;
+    color: #080808;
+    font-size: large;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    border-radius: 19px;
+}
