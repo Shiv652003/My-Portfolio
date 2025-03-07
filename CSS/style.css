@@ -234,11 +234,11 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: "Frontend Designer";
+        content: "Embedded Software Developer";
     }
     21%,
     40%{
-        content: "Python Developer";
+        content: "Web & Firmware Developer";
     }
     41%,
     60%{
@@ -246,11 +246,11 @@ span{
     }
     61%,
     80%{
-        content: "Web Designer";
+        content: "Debugger";
     }
     81%,
     100%{
-        content: "Database Administrator";
+        content: "Network/Protocol Engineer";
     }
 }
 @keyframes typing{
